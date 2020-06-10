@@ -1,0 +1,46 @@
+{
+  "name": "stem_jet_b2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Martins-O-U/stem_jet_B2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Martins-O-U/stem_jet_B2/issues"
+  },
+  "homepage": "https://github.com/Martins-O-U/stem_jet_B2#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.22.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.1",
+    "knex-cleaner": "^1.3.0",
+    "sqlite3": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "prettier-eslint": "^10.1.1"
+  }
+}
