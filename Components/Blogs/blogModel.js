@@ -4,21 +4,21 @@ function findAllBlogs() {
     return db
         .from('blogList')
         .select(
-            "blogs.title",
-            "blogs.body",
-            "blogs.created_at"
+            "blogList.title",
+            "blogList.body",
+            "blogList.created_at"
         )
 }
 
 function findBlogByID(id) {
     return db
         .select(
-            "blogs.title",
-            "blogs.body",
-            "blogs.created_at"
+            "blogList.title",
+            "blogList.body",
+            "blogList.created_at"
         )
         .from('blogList')
-        .where('cr.user_id', '=', id).first();
+        .where('blogList.id', '=', id).first();
 }
 
 
