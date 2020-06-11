@@ -22,8 +22,8 @@ const getBlogById = async (req, res) => {
 const addBlog = async (req, res) => {
     try {
         const newBlogPost = req.body;
-        const review = await Reviews.insertBlog(newBlogPost);
-        return res.status(201).json(review);
+        const newPost = await blogPosts.insertBlog(newBlogPost);
+        return res.status(201).json(newPost);
     } catch (error) {
         return res.status(500).json({ error: error.message });
     }

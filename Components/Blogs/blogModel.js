@@ -4,6 +4,7 @@ function findAllBlogs() {
     return db
         .from('blogList')
         .select(
+            "blogLIst.id",
             "blogList.title",
             "blogList.body",
             "blogList.created_at"
@@ -13,6 +14,7 @@ function findAllBlogs() {
 function findBlogByID(id) {
     return db
         .select(
+            "blogLIst.id",
             "blogList.title",
             "blogList.body",
             "blogList.created_at"
@@ -38,7 +40,7 @@ function insertBlog(information) {
     return db('blogList')
         .insert(information, 'id')
         .then(ids => {
-            return findReviewById(ids[0]);
+            return findBlogByID(ids[0]);
         });
 }
 

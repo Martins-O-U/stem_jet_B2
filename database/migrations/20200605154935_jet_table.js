@@ -1,21 +1,20 @@
 
 exports.up = function (knex) {
-    return knex.schema.createTable('usersList', users => {
-        users.increments('id');
-        users.string('full_name', 128).notNullable()
-        users.string('email_address', 128).notNullable();
-        users.string('location', 150)
+    return knex.schema.createTable('blogList', table => {
+        table.increments('id');
+        table.string('title', 150).notNullable()
+        table.string('body').notNullable();
+        table.date('created_at');
     })
-        .createTable('blogList', blog => {
-            blog.increments("id");
-            blog.string('title', 150).notNullable()
-            blog.string('body').notNullable();
-            blog.timestamps('created_at');
+        .createTable('users', table => {
+            table.increments('id');
+            table.string('fullName').notNullable();
+            table.string('emailAddress').notNullable();
+            table.string('locations')
         })
 };
 
 exports.down = function (knex) {
     return knex.schema
-        .dropTableIfExists('usersList')
         .dropTableIfExists('blogList')
 };

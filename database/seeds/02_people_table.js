@@ -1,19 +1,21 @@
 
 exports.seed = function (knex) {
   // Deletes ALL existing entries
-  return knex('usersList').del()
+  return knex('peoplesList').del()
     .then(function () {
       // Inserts seed entries
-      return knex('usersList').insert([
+      return knex('users').insert([
         {
-          full_name: 'James Brown',
-          email_address: 'james@mail.com',
-          location: 'Here, Earth',
+          id: 1,
+          fullName: 'James Brown',
+          emailAddress: 'james@mail.com',
+          locations: 'Here, Earth',
         },
         {
-          full_name: 'Sweet Talks',
-          email_address: 'sweet@mail.com',
-          location: 'lagos, Nigeria',
+          id: 2,
+          fullName: 'Sweet Talks',
+          emailAddress: 'sweet@mail.com',
+          locations: 'lagos, Nigeria',
         }
       ]);
     });
