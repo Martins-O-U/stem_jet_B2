@@ -5,7 +5,7 @@ exports.up = function (knex) {
         table.string('title', 150).notNullable()
         table.string('body').notNullable();
     })
-        .createTable('usersCollection', table => {
+        .createTable('usersCollections', table => {
             table.increments('id');
             table.string('fullName').notNullable();
             table.string('emailAddress').notNullable();
