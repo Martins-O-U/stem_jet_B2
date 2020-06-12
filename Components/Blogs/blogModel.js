@@ -7,7 +7,6 @@ function findAllBlogs() {
             "blogLIst.id",
             "blogList.title",
             "blogList.body",
-            "blogList.created_at"
         )
 }
 
