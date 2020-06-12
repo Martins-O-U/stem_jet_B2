@@ -17,7 +17,6 @@ function findBlogByID(id) {
             "blogLIst.id",
             "blogList.title",
             "blogList.body",
-            "blogList.created_at"
         )
         .from('blogList')
         .where('blogList.id', '=', id).first();
