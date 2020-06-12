@@ -4,9 +4,8 @@ exports.up = function (knex) {
         table.increments('id');
         table.string('title', 150).notNullable()
         table.string('body').notNullable();
-        table.date('created_at');
     })
-        .createTable('users', table => {
+        .createTable('usersCollection', table => {
             table.increments('id');
             table.string('fullName').notNullable();
             table.string('emailAddress').notNullable();
