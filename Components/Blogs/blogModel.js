@@ -4,7 +4,7 @@ function findAllBlogs() {
     return db
         .from('blogList')
         .select(
-            "blogLIst.id",
+            "blogList.id",
             "blogList.title",
             "blogList.body",
         )
@@ -13,7 +13,7 @@ function findAllBlogs() {
 function findBlogByID(id) {
     return db
         .select(
-            "blogLIst.id",
+            "blogList.id",
             "blogList.title",
             "blogList.body",
         )
