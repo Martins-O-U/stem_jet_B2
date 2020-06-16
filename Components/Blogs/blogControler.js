@@ -34,11 +34,9 @@ const updatePostedBlog = async (req, res) => {
     const { id } = req.params;
     const changes = req.body;
     try {
-        await Reviews.updateReview(id, changes);
-        const updatedReview = await blogPosts.updateBlog;
-        return res.status(200).json(updatedReview);
+        const updatedPost = await blogPosts.updateBlog(id, changes);
+        return res.status(200).json(updatedPost);
     } catch (error) {
-        Sentry.captureException(error);
         return res.status(500).json({ error: error.message });
     }
 };
