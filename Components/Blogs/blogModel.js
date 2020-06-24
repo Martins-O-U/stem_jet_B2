@@ -8,6 +8,7 @@ function findAllBlogs() {
             "blogList.title",
             "blogList.body",
         )
+        .orderBy("id", "desc")
 }
 
 function findBlogByID(id) {

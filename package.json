@@ -20,13 +20,18 @@
   },
   "homepage": "https://github.com/Martins-O-U/stem_jet_B2#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "handlebars": "^4.7.6",
     "helmet": "^3.22.0",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.21.1",
     "knex-cleaner": "^1.3.0",
+    "nodemailer": "^6.4.10",
+    "nodemailer-express-handlebars": "^4.0.0",
     "pg": "^8.2.1",
     "sqlite3": "^4.2.0"
   },
