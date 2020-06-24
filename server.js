@@ -12,7 +12,16 @@ const server = express();
 server.engine('handlebars', exphbs());
 server.set('view engine', 'handlebars');
 
-server.use(cors());
+server.use(
+    cors({
+        origin: [
+            'http://localhost:7500',
+            'https://vigorous-gates-90dee4.netlify.app',
+            '*',
+        ],
+        credentials: true,
+    })
+);
 server.use(helmet());
 server.use(express.json());
 server.use('/api', jetblogs);
