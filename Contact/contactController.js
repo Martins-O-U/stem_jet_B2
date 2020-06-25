@@ -34,10 +34,12 @@ const sendMail = async (req, res) => {
 
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
-            console.log(error);
-        } else {
-            console.log('Email sent: ' + info.response);
+            return res.status(500).json(error);
         }
+
+        return res.status(200).json({
+            message: 'Contact message sent successfully!',
+        });
     });
 
 };

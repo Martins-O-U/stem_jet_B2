@@ -1,11 +1,11 @@
 const dotenv = require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const contact = require('./Contact/index')
 const jetblogs = require('./Components/Blogs/index')
 
-const cors = require('cors');
 const helmet = require('helmet');
 const server = express();
 
@@ -14,7 +14,7 @@ server.set('view engine', 'handlebars');
 
 server.use(
     cors({
-        origin: "https://stemjet.netlify.app",
+        origin: '*',
         methods: "POST"
     })
 );
