@@ -15,9 +15,11 @@ const sendMail = async (req, res) => {
     `;
 
     var transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: 'mail.privateemail.com',
+        port: 587,
+        secure: false,
         auth: {
-            user: 'onyedikachiym@gmail.com',
+            user: 'contact@martinsonyedikachi.com',
             pass: process.env.EMAIL_PASSWORD
         },
         tls: {
@@ -26,7 +28,7 @@ const sendMail = async (req, res) => {
     });
 
     var mailOptions = {
-        from: 'onyedikachiym@gmail.com',
+        from: 'contact@martinsonyedikachi.com',
         to: 'martinsonyedikachi@gmail.com',
         subject: 'Message From StemJet Web App',
         html: output
