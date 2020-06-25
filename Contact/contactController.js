@@ -19,6 +19,9 @@ const sendMail = async (req, res) => {
         auth: {
             user: 'onyedikachiym@gmail.com',
             pass: process.env.EMAIL_PASSWORD
+        },
+        tls: {
+            rejectUnauthorized: false
         }
     });
 
