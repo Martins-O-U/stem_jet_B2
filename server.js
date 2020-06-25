@@ -14,12 +14,8 @@ server.set('view engine', 'handlebars');
 
 server.use(
     cors({
-        origin: [
-            'http://localhost:7500',
-            'https://vigorous-gates-90dee4.netlify.app',
-            '*',
-        ],
-        credentials: true,
+        origin: "https://stemjet.netlify.app",
+        methods: "POST"
     })
 );
 server.use(helmet());
