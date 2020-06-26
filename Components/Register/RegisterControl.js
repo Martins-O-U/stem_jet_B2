@@ -5,8 +5,8 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
     RegisterPersons.findAllPersons()
-        .then(res => {
-            res.status(200).json(res)
+        .then(person => {
+            res.status(200).json(person)
         })
         .catch(error => {
             res.status(500).json({ error: error.message });
@@ -47,7 +47,6 @@ router.post("/", (req, res) => {
                 return res.status(500).json({ error: error.message });
             }
 
-            RegisterPersons.insertPersons(req.body)
             return res.status(200).json({
                 message: 'Join-us message sent successfully!',
             });
@@ -60,7 +59,4 @@ router.post("/", (req, res) => {
 
 
 
-module.exports = {
-    addPersons,
-    getAllPersons,
-};
+module.exports = router;

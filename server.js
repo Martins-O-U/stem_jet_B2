@@ -25,7 +25,7 @@ server.use('/api', jetblogs);
 server.use(bodyParser.urlencoded({ extended: false }))
 server.use(bodyParser.json())
 server.use('/contact', contact)
-server.use('/joinus', registered)
+server.use('/join-us', registered)
 
 server.get('/', (req, res) => {
     return res.json({ message: 'API is up ' });
