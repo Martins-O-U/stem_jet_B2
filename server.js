@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const contact = require('./Contact/index')
 const jetblogs = require('./Components/Blogs/index')
+const registered = require('./Components/Register/RegisterControl')
 
 const helmet = require('helmet');
 const server = express();
@@ -24,7 +25,7 @@ server.use('/api', jetblogs);
 server.use(bodyParser.urlencoded({ extended: false }))
 server.use(bodyParser.json())
 server.use('/contact', contact)
-
+server.use('/joinus', registered)
 
 server.get('/', (req, res) => {
     return res.json({ message: 'API is up ' });
