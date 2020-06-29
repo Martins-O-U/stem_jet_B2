@@ -29,7 +29,7 @@ const sendMail = async (req, res) => {
 
     var mailOptions = {
         from: 'contact@martinsonyedikachi.com',
-        to: 'martinsonyedikachi@gmail.com',
+        to: 'martinsonyedikachi@gmail.com, stemjets@gmail.com',
         subject: 'Message From StemJet Web App',
         html: output
     };
